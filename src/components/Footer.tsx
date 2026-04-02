@@ -5,36 +5,37 @@ import { MdOutlineEmail } from "react-icons/md";
 import { PiPhoneLight } from "react-icons/pi";
 import { RiInstagramFill } from "react-icons/ri";
 import { TiSocialFacebook, TiSocialLinkedin } from "react-icons/ti";
+import type { Links } from "../lib/types";
 
 const socials = [
 	{
 		id: 1,
 		site: "https://facebook.com",
-		icon: <TiSocialFacebook />,
+		Icon: TiSocialFacebook,
 	},
 	{
 		id: 2,
 		site: "https://twitter.com",
-		icon: <FaTwitter />,
+		Icon: FaTwitter,
 	},
 	{
 		id: 3,
 		site: "https://instagram.com",
-		icon: <RiInstagramFill />,
+		Icon: RiInstagramFill,
 	},
 	{
 		id: 4,
 		site: "https://linkedin.com",
-		icon: <TiSocialLinkedin />,
+		Icon: TiSocialLinkedin,
 	},
 	{
-		id: 4,
+		id: 5,
 		site: "https://youtube.com",
-		icon: <FaYoutube />,
+		Icon: FaYoutube,
 	},
 ];
 
-const links = [
+const links: Links[] = [
 	{
 		header: "Explore",
 		links: [
@@ -70,9 +71,9 @@ const links = [
 
 export default function Footer() {
 	return (
-		<footer className="">
-			<div className="pt-20 pb-5">
-				<div className="w-[301.36px]">
+		<footer className="px-44.25">
+			<div className="flex justify-center pt-20 pb-5">
+				<div className="mr-auto w-[301.36px]">
 					<div className="flex items-center gap-3 mb-4">
 						<div className="bg-[#4F46E5] p-3 rounded-lg text-gray-100">
 							<Rocket className="size-6" />
@@ -84,17 +85,45 @@ export default function Footer() {
 					<p className="mb-6 font-medium text-[#130E67]">
 						Your learning journey starts here! Browse courses to get started.
 					</p>
-					<ul className="flex *:flex items-center *:items-center gap-5.5 *:size-4.75 *:text-[#736BEA]">
+					<ul className="flex items-center gap-5.5 *:text-[#736BEA]">
 						{socials.map((s) => (
-							<li key={s.id}>
-								<a href={s.site} target="_blank">
-									{s.icon}
-								</a>
-							</li>
+							<SocialLink key={s.id} icon={<s.Icon />} site={s.site} />
 						))}
 					</ul>
 				</div>
+				<div className="flex gap-30">
+					{links.map((link) => (
+						<LinksList key={link.header} link={link} />
+					))}
+				</div>
+			</div>
+			<div className="flex justify-between pb-5 text-gray-500">
+				<p>Copyright © 2026 Redberry International</p>
+				<p className="*:text-[#736BEA]">
+					All Rights Reserved | <a href="/">Terms and Conditions</a> |{" "}
+					<a href="/">Privacy Policy</a>
+				</p>
 			</div>
 		</footer>
 	);
+}
+
+function LinksList({ link }: { link: Links }) {
+	return (
+		<ul key={link.header}>
+			<div className="mb-4 font-semibold text-[#130E67]">{link.header}</div>
+			{link.links.map((l) => (
+				<li key={l.text} className="mb-2.5 text-gray-500">
+					<a href={l.link} className="flex items-center gap-1.5">
+						{l.icon ? l.icon : null}
+						{l.text}
+					</a>
+				</li>
+			))}
+		</ul>
+	);
+}
+
+function SocialLink({ icon, site }: { icon: React.ReactNode; site: string }) {
+	return <a href={site}>{icon}</a>;
 }
