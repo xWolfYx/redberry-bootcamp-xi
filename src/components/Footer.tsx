@@ -1,4 +1,3 @@
-import { Rocket } from "lucide-react";
 import { FaTwitter, FaYoutube } from "react-icons/fa";
 import { LuMapPin } from "react-icons/lu";
 import { MdOutlineEmail } from "react-icons/md";
@@ -6,6 +5,7 @@ import { PiPhoneLight } from "react-icons/pi";
 import { RiInstagramFill } from "react-icons/ri";
 import { TiSocialFacebook, TiSocialLinkedin } from "react-icons/ti";
 import type { Links } from "../lib/types";
+import RocketLogo from "./RocketLogo";
 
 const socials = [
 	{
@@ -75,9 +75,7 @@ export default function Footer() {
 			<div className="flex justify-center pt-20 pb-5">
 				<div className="mr-auto w-[301.36px]">
 					<div className="flex items-center gap-3 mb-4">
-						<div className="bg-[#4F46E5] p-3 rounded-lg text-gray-100">
-							<Rocket className="size-6" />
-						</div>
+						<RocketLogo />
 						<span className="font-medium text-[#130E67] text-2xl">
 							Bootcamp
 						</span>
