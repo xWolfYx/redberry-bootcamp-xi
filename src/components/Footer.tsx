@@ -75,7 +75,7 @@ export default function Footer() {
 			<div className="flex justify-center pt-20 pb-5">
 				<div className="mr-auto w-[301.36px]">
 					<div className="flex items-center gap-3 mb-4">
-						<RocketLogo />
+						<RocketLogo size="11.25" />
 						<span className="font-medium text-[#130E67] text-2xl">
 							Bootcamp
 						</span>
