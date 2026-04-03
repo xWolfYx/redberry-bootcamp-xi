@@ -71,7 +71,7 @@ const links: Links[] = [
 
 export default function Footer() {
 	return (
-		<footer className="px-44.25">
+		<footer className="flex flex-col m-auto px-44.25 max-w-391.5">
 			<div className="flex justify-center pt-20 pb-5">
 				<div className="mr-auto w-[301.36px]">
 					<div className="flex items-center gap-3 mb-4">
