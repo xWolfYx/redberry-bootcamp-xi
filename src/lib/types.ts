@@ -8,3 +8,5 @@ type Link = {
 	link: string;
 	icon?: React.ReactNode;
 };
+
+export type SliderItem = { header: string; body: string; imageSrc: string };
