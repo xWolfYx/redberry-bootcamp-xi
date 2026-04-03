@@ -25,9 +25,9 @@ export default function Navbar() {
 							strokeWidth="2"
 						/>
 					</svg>
-					<p className="capitalize">Browse courses</p>
+					<p className="text-gray-600 text-xl capitalize">Browse courses</p>
 				</Link>
-				<div className="flex gap-3.75 ml-9 *:cursor-pointer">
+				<div className="flex gap-3.75 ml-12 *:cursor-pointer">
 					<TransparentBtn>Log in</TransparentBtn>
 					<SolidBtn>Sign up</SolidBtn>
 				</div>
