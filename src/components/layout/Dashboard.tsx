@@ -7,17 +7,17 @@ const sliderItems: SliderItem[] = [
 	{
 		header: "Start learning something new today",
 		body: "Explore a wide range of expert-led courses in design, development, business, and more. Find the skills you need to grow your career and learn at your own pace.",
-		imageSrc: "/src/assets/backgrounds/bg-1.png",
+		imageSrc: "/assets/backgrounds/bg-1.png",
 	},
 	{
 		header: "Pick up where you left off",
 		body: "Your learning journey is already in progress. Continue your enrolled courses, track your progress, and stay on track toward completing your goals.",
-		imageSrc: "/src/assets/backgrounds/bg-2.png",
+		imageSrc: "/assets/backgrounds/bg-2.png",
 	},
 	{
 		header: "Learn together, grow faster",
 		body: "",
-		imageSrc: "/src/assets/backgrounds/bg-3.png",
+		imageSrc: "/assets/backgrounds/bg-3.png",
 	},
 ];
 

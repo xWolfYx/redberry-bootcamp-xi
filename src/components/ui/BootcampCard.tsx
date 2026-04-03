@@ -4,11 +4,7 @@ import SolidBtn from "./SolidBtn";
 export default function BootcampCard() {
 	return (
 		<div className="bg-white p-5 rounded-xl max-w-126.5">
-			<img
-				src="src/assets/coding-screen.png"
-				alt=""
-				className="rounded-[10px]"
-			/>
+			<img src="/assets/coding-screen.png" alt="" className="rounded-[10px]" />
 			<div className="flex justify-between items-center mt-4">
 				<p className="font-medium text-[14px] text-gray-500">
 					Lecturer Marilyn Mango
