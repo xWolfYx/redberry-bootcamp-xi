@@ -5,7 +5,7 @@ import { PiPhoneLight } from "react-icons/pi";
 import { RiInstagramFill } from "react-icons/ri";
 import { TiSocialFacebook, TiSocialLinkedin } from "react-icons/ti";
 import type { Links } from "../lib/types";
-import RocketLogo from "./RocketLogo";
+import RocketLogo from "./ui/RocketLogo";
 
 const socials = [
 	{
