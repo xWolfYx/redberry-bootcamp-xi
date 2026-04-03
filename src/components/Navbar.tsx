@@ -7,7 +7,7 @@ export default function Navbar() {
 	return (
 		<nav className="flex justify-between items-center shadow-sm px-44.25 py-6">
 			<Link to="/">
-				<RocketLogo size="15" />
+				<RocketLogo size={60} />
 			</Link>
 			<div className="flex items-center">
 				<Link to="/" className="flex gap-2.5">
