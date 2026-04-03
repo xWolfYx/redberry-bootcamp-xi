@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
-import RocketLogo from "./RocketLogo";
+import RocketLogo from "./ui/RocketLogo";
+import SolidBtn from "./ui/SolidBtn";
+import TransparentBtn from "./ui/TransparentBtn";
 
 export default function Navbar() {
 	return (
@@ -7,7 +9,7 @@ export default function Navbar() {
 			<Link to="/">
 				<RocketLogo size="15" />
 			</Link>
-			<div>
+			<div className="flex items-center">
 				<Link to="/" className="flex gap-2.5">
 					<svg
 						width="21"
@@ -25,6 +27,10 @@ export default function Navbar() {
 					</svg>
 					<p className="capitalize">Browse courses</p>
 				</Link>
+				<div className="flex gap-3.75 ml-9 *:cursor-pointer">
+					<TransparentBtn>Log in</TransparentBtn>
+					<SolidBtn>Sign up</SolidBtn>
+				</div>
 			</div>
 		</nav>
 	);
