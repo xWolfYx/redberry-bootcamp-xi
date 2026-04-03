@@ -99,7 +99,9 @@ export default function Footer() {
 				<p>Copyright © 2026 Redberry International</p>
 				<p className="*:text-[#736BEA]">
 					All Rights Reserved | <a href="/">Terms and Conditions</a> |{" "}
-					<a href="/">Privacy Policy</a>
+					<a href="/" target="_blank" rel="noopener noreferrer">
+						Privacy Policy
+					</a>
 				</p>
 			</div>
 		</footer>
@@ -112,7 +114,12 @@ function LinksList({ link }: { link: Links }) {
 			<div className="mb-4 font-semibold text-[#130E67]">{link.header}</div>
 			{link.links.map((l) => (
 				<li key={l.text} className="mb-2.5 text-gray-500">
-					<a href={l.link} className="flex items-center gap-1.5">
+					<a
+						href={l.link}
+						className="flex items-center gap-1.5"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						{l.icon ? l.icon : null}
 						{l.text}
 					</a>
@@ -123,5 +130,9 @@ function LinksList({ link }: { link: Links }) {
 }
 
 function SocialLink({ icon, site }: { icon: React.ReactNode; site: string }) {
-	return <a href={site}>{icon}</a>;
+	return (
+		<a href={site} target="_blank" rel="noopener noreferrer">
+			{icon}
+		</a>
+	);
 }
