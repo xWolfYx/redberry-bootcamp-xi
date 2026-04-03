@@ -1,6 +1,7 @@
 import { CircleChevronLeft, CircleChevronRight } from "lucide-react";
 import type { SliderItem } from "../../lib/types";
 import SolidBtn from "../ui/SolidBtn";
+import ContinueLearning from "./ContinueLearning";
 import StartLearningToday from "./StartLearningToday";
 
 const sliderItems: SliderItem[] = [
@@ -26,6 +27,7 @@ export default function Dashboard() {
 		<div className="flex flex-col justify-center px-44.25 pt-16 pb-30">
 			<Slider />
 			<StartLearningToday />
+			<ContinueLearning />
 		</div>
 	);
 }
