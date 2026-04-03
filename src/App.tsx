@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import "@fontsource-variable/inter/wght.css";
 
 function App() {
 	return (
