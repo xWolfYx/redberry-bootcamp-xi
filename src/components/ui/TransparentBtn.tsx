@@ -8,7 +8,7 @@ export default function TransparentBtn({
 	return (
 		<button
 			type="button"
-			className={`px-4 py-3 border-[#958FEF] border-2 rounded-lg font-medium text-[#4F46E5] capitalize ${styles}`}
+			className={`px-6.5 py-3 border-[#958FEF] font-medium border-2 text-xl rounded-lg text-[#4F46E5] capitalize ${styles}`}
 		>
 			{children}
 		</button>
